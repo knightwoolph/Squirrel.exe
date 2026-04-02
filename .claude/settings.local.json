@@ -8,7 +8,9 @@
       "Bash(npx tsc:*)",
       "Bash(netstat:*)",
       "Bash(findstr:*)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Skill(ralph-loop:ralph-loop)",
+      "Skill(ralph-loop:ralph-loop:*)"
     ]
   }
 }
