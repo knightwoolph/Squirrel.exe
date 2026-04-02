@@ -1,0 +1,96 @@
+/**
+ * SQRL.EXE Theme: Warm Forest
+ * ============================
+ * Default theme - Cozy browns, forest greens, acorn amber
+ * Best for: Reducing eye strain, evening use, focus sessions
+ */
+
+[data-theme="warm-forest"],
+:root {
+    /* ---- Background Colors ---- */
+    --bg-primary: #1a1612;
+    --bg-secondary: #2d2520;
+    --bg-tertiary: #3d3530;
+    --bg-elevated: #453d35;
+    --bg-overlay: rgba(26, 22, 18, 0.85);
+
+    /* ---- Accent Colors ---- */
+    --accent-primary: #d4a574;
+    /* Acorn Gold - main CTA */
+    --accent-primary-hover: #e0b584;
+    --accent-primary-active: #c89564;
+    --accent-secondary: #8fbc8f;
+    /* Forest Green */
+    --accent-secondary-hover: #a0cda0;
+    --accent-tertiary: #cd853f;
+    /* Warm Amber */
+
+    /* ---- Text Colors ---- */
+    --text-primary: #f5f0eb;
+    --text-secondary: #c4b8a8;
+    --text-muted: #8a7a6a;
+    --text-disabled: #5a4a3a;
+    --text-inverse: #1a1612;
+    --text-on-accent: #1a1612;
+
+    /* ---- Semantic Colors ---- */
+    --success: #7cb87c;
+    --success-bg: rgba(124, 184, 124, 0.15);
+    --success-border: rgba(124, 184, 124, 0.3);
+
+    --warning: #e8a850;
+    --warning-bg: rgba(232, 168, 80, 0.15);
+    --warning-border: rgba(232, 168, 80, 0.3);
+
+    --danger: #d47070;
+    --danger-bg: rgba(212, 112, 112, 0.15);
+    --danger-border: rgba(212, 112, 112, 0.3);
+
+    --info: #70a0d4;
+    --info-bg: rgba(112, 160, 212, 0.15);
+    --info-border: rgba(112, 160, 212, 0.3);
+
+    /* ---- Border Colors ---- */
+    --border-default: rgba(196, 184, 168, 0.15);
+    --border-hover: rgba(196, 184, 168, 0.25);
+    --border-focus: var(--accent-primary);
+    --border-subtle: rgba(196, 184, 168, 0.08);
+
+    /* ---- Shadows ---- */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.35);
+    --shadow-glow: 0 0 20px rgba(212, 165, 116, 0.4);
+    --shadow-glow-success: 0 0 20px rgba(124, 184, 124, 0.4);
+
+    /* ---- Gamification Colors ---- */
+    --nut-gold: #d4a574;
+    --nut-shine: #f5e6d3;
+    --streak-fire: #ff6b35;
+    --oak-trunk: #8b5a2b;
+    --oak-leaves: #556b2f;
+    --oak-highlight: #9acd32;
+    --confetti-1: #d4a574;
+    --confetti-2: #8fbc8f;
+    --confetti-3: #cd853f;
+    --confetti-4: #daa520;
+    --confetti-5: #f5f0eb;
+
+    /* ---- Priority Colors ---- */
+    --priority-critical: #d47070;
+    --priority-high: #e8a850;
+    --priority-medium: #d4a574;
+    --priority-low: #c4b8a8;
+    --priority-someday: #8a7a6a;
+
+    /* ---- Interactive States ---- */
+    --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-primary);
+    --hover-overlay: rgba(212, 165, 116, 0.08);
+    --active-overlay: rgba(212, 165, 116, 0.12);
+
+    /* ---- Scrollbar ---- */
+    --scrollbar-track: var(--bg-secondary);
+    --scrollbar-thumb: var(--bg-tertiary);
+    --scrollbar-thumb-hover: var(--accent-primary);
+}

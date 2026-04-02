@@ -1,0 +1,119 @@
+/**
+ * SQRL.EXE Design System
+ * ========================
+ * Core design tokens for the ADHD-focused task manager
+ * 
+ * Usage: Import this file first, then theme-specific overrides
+ */
+
+/* ============================================
+   ROOT VARIABLES (Theme-agnostic defaults)
+   ============================================ */
+
+:root {
+  /* ---- Typography Scale ---- */
+  --text-xs: 0.75rem;     /* 12px - labels, hints */
+  --text-sm: 0.875rem;    /* 14px - secondary text */
+  --text-base: 1rem;      /* 16px - body text */
+  --text-lg: 1.125rem;    /* 18px - subheadings */
+  --text-xl: 1.25rem;     /* 20px - section titles */
+  --text-2xl: 1.5rem;     /* 24px - page titles */
+  --text-3xl: 2rem;       /* 32px - hero/stats */
+  --text-4xl: 2.5rem;     /* 40px - major numbers */
+
+  /* ---- Font Weights ---- */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* ---- Line Heights ---- */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* ---- Spacing Scale (8px base) ---- */
+  --space-0: 0;
+  --space-1: 0.25rem;     /* 4px */
+  --space-2: 0.5rem;      /* 8px */
+  --space-3: 0.75rem;     /* 12px */
+  --space-4: 1rem;        /* 16px */
+  --space-5: 1.25rem;     /* 20px */
+  --space-6: 1.5rem;      /* 24px */
+  --space-8: 2rem;        /* 32px */
+  --space-10: 2.5rem;     /* 40px */
+  --space-12: 3rem;       /* 48px */
+  --space-16: 4rem;       /* 64px */
+  --space-20: 5rem;       /* 80px */
+  --space-24: 6rem;       /* 96px */
+
+  /* ---- Border Radius ---- */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 100ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- Z-Index Scale ---- */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal-backdrop: 300;
+  --z-modal: 400;
+  --z-popover: 500;
+  --z-tooltip: 600;
+  --z-toast: 700;
+  --z-confetti: 1000;
+
+  /* ---- Breakpoints (for reference in JS) ---- */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ---- Layout ---- */
+  --sidebar-width-collapsed: 64px;
+  --sidebar-width-expanded: 240px;
+  --header-height: 56px;
+  --timer-widget-size: 80px;
+}
+
+/* ============================================
+   FONT MODE: DEFAULT (Inter)
+   ============================================ */
+
+[data-font-mode="default"],
+:root {
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* ============================================
+   FONT MODE: SIMPLE (Monospace)
+   ============================================ */
+
+[data-font-mode="simple"] {
+  --font-family-base: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-family-display: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+/* ============================================
+   FONT MODE: FANCY (Serif)
+   ============================================ */
+
+[data-font-mode="fancy"] {
+  --font-family-base: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-family-display: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}

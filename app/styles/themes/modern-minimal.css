@@ -1,0 +1,95 @@
+/**
+ * SQRL.EXE Theme: Modern Minimal
+ * ===============================
+ * Light theme - Clean whites, subtle accents, professional
+ * Best for: Daytime use, formal environments, reduced visual noise
+ */
+
+[data-theme="modern-minimal"] {
+    /* ---- Background Colors ---- */
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f0f0;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(250, 250, 250, 0.95);
+
+    /* ---- Accent Colors ---- */
+    --accent-primary: #c4956a;
+    /* Muted Acorn */
+    --accent-primary-hover: #d4a57a;
+    --accent-primary-active: #b4855a;
+    --accent-secondary: #5a8a5a;
+    /* Sage Green */
+    --accent-secondary-hover: #6a9a6a;
+    --accent-tertiary: #4a4a4a;
+    /* Charcoal */
+
+    /* ---- Text Colors ---- */
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-muted: #9a9a9a;
+    --text-disabled: #c0c0c0;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* ---- Semantic Colors ---- */
+    --success: #4a9a4a;
+    --success-bg: rgba(74, 154, 74, 0.1);
+    --success-border: rgba(74, 154, 74, 0.25);
+
+    --warning: #d4a020;
+    --warning-bg: rgba(212, 160, 32, 0.1);
+    --warning-border: rgba(212, 160, 32, 0.25);
+
+    --danger: #c45050;
+    --danger-bg: rgba(196, 80, 80, 0.1);
+    --danger-border: rgba(196, 80, 80, 0.25);
+
+    --info: #5080c4;
+    --info-bg: rgba(80, 128, 196, 0.1);
+    --info-border: rgba(80, 128, 196, 0.25);
+
+    /* ---- Border Colors ---- */
+    --border-default: rgba(0, 0, 0, 0.1);
+    --border-hover: rgba(0, 0, 0, 0.15);
+    --border-focus: var(--accent-primary);
+    --border-subtle: rgba(0, 0, 0, 0.05);
+
+    /* ---- Shadows ---- */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.12);
+    --shadow-glow: 0 0 20px rgba(196, 149, 106, 0.3);
+    --shadow-glow-success: 0 0 20px rgba(74, 154, 74, 0.3);
+
+    /* ---- Gamification Colors ---- */
+    --nut-gold: #c4956a;
+    --nut-shine: #fff5e6;
+    --streak-fire: #e85a30;
+    --oak-trunk: #7a4a1b;
+    --oak-leaves: #4a6a2a;
+    --oak-highlight: #8abd22;
+    --confetti-1: #c4956a;
+    --confetti-2: #5a8a5a;
+    --confetti-3: #bd752f;
+    --confetti-4: #ca9510;
+    --confetti-5: #4a4a4a;
+
+    /* ---- Priority Colors ---- */
+    --priority-critical: #c45050;
+    --priority-high: #d4a020;
+    --priority-medium: #c4956a;
+    --priority-low: #9a9a9a;
+    --priority-someday: #c0c0c0;
+
+    /* ---- Interactive States ---- */
+    --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent-primary);
+    --hover-overlay: rgba(196, 149, 106, 0.06);
+    --active-overlay: rgba(196, 149, 106, 0.1);
+
+    /* ---- Scrollbar ---- */
+    --scrollbar-track: var(--bg-tertiary);
+    --scrollbar-thumb: #d0d0d0;
+    --scrollbar-thumb-hover: var(--accent-primary);
+}

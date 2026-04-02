@@ -1,0 +1,222 @@
+/**
+ * SQRL.EXE Component Styles - Gamification
+ * ==========================================
+ * Victory Oak, confetti, nut animations, rewards
+ */
+
+/* ---- Nut Drop Animation ---- */
+.nut-drop {
+    position: fixed;
+    font-size: 2rem;
+    z-index: var(--z-confetti);
+    pointer-events: none;
+    animation: nutDrop 1.5s ease-out forwards;
+}
+
+@keyframes nutDrop {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.2) rotate(180deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100px) scale(0.8) rotate(360deg);
+    }
+}
+
+.nut-earned-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--nut-gold);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    text-align: center;
+    z-index: var(--z-confetti);
+    animation: nutPopup 0.5s ease-out;
+}
+
+@keyframes nutPopup {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.nut-earned-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-2);
+}
+
+.nut-earned-value {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--nut-gold);
+}
+
+.nut-earned-label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* ---- Confetti ---- */
+.confetti-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: var(--z-confetti);
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    animation: confettiFall 3s ease-out forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ---- Victory Oak ---- */
+.victory-oak-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-8);
+}
+
+.victory-oak-tree {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.victory-oak-balance {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.victory-oak-nuts {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    color: var(--nut-gold);
+}
+
+.victory-oak-label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.victory-oak-squirrel {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    animation: squirrelBounce 2s ease-in-out infinite;
+}
+
+@keyframes squirrelBounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* ---- Stats Grid ---- */
+.gamification-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+}
+
+/* ---- Avatar Skin Picker ---- */
+.skin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--space-4);
+}
+
+.skin-card {
+    padding: var(--space-4);
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.skin-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+}
+
+.skin-card.owned {
+    border-color: var(--success);
+}
+
+.skin-card.active {
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.skin-card.locked {
+    opacity: 0.6;
+}
+
+.skin-avatar {
+    font-size: 3rem;
+    margin-bottom: var(--space-2);
+}
+
+.skin-name {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+}
+
+.skin-cost {
+    font-size: var(--text-xs);
+    color: var(--nut-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+}
