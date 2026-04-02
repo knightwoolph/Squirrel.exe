@@ -4,6 +4,7 @@ import { Sidebar } from './Sidebar';
 import { Header } from './Header';
 import { useAppStore, initializeAppearance } from '../../stores/appStore';
 import { initializeDatabase } from '../../db/database';
+import { cn } from '@/lib/utils';
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -19,13 +20,14 @@ const pageTitles: Record<string, string> = {
   '/victory-oak': 'Victory Oak',
   '/stash': 'Brain Dump',
   '/settings': 'Settings',
+  '/timer': 'Timer',
 };
 
 export function AppLayout({ children }: AppLayoutProps) {
   const location = useLocation();
   const { sidebarExpanded } = useAppStore();
 
-  const pageTitle = pageTitles[location.pathname] || 'SQRL.EXE';
+  const pageTitle = pageTitles[location.pathname] ?? 'SQRL.EXE';
 
   // Initialize appearance and database on mount
   useEffect(() => {
@@ -61,14 +63,26 @@ export function AppLayout({ children }: AppLayoutProps) {
   }, []);
 
   return (
-    <div className={`app-layout ${sidebarExpanded ? 'sidebar-expanded' : ''}`}>
+    <div className="flex h-screen overflow-hidden bg-background text-foreground">
       <Sidebar />
 
-      <div className="app-content">
+      {/* Main content area — offset by sidebar width with smooth transition */}
+      <div
+        className={cn(
+          'flex min-w-0 flex-1 flex-col overflow-hidden',
+          'transition-[margin-left] duration-300 ease-in-out',
+          // Desktop: respect sidebar collapsed/expanded state
+          sidebarExpanded
+            ? 'lg:ml-sidebar-expanded'
+            : 'lg:ml-sidebar-collapsed'
+        )}
+      >
         <Header title={pageTitle} />
 
-        <main className="app-main">
-          {children}
+        <main className="flex-1 overflow-y-auto">
+          <div className="h-full">
+            {children}
+          </div>
         </main>
       </div>
     </div>
