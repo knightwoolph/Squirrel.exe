@@ -4,6 +4,7 @@ import { AppLayout } from './components/layout/AppLayout'
 import { ToastContainer } from './components/common/Toast'
 import { GlobalConfetti } from './components/common/Confetti'
 import { CommandPalette } from './components/common/CommandPalette'
+import { QuickStash } from './components/common/QuickStash'
 
 // Lazy-loaded pages for code splitting
 const Dashboard = lazy(() => import('./pages/Dashboard').then(m => ({ default: m.Dashboard })))
@@ -48,6 +49,7 @@ function App() {
         </Suspense>
       </AppLayout>
       <CommandPalette />
+      <QuickStash />
       <ToastContainer />
       <GlobalConfetti />
     </>

@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 import { useAppStore } from '../../stores/appStore';
 import { useProfile, useStreakMultiplier } from '../../stores/gamificationStore';
+import { KeyboardShortcutsDialog } from '../common/KeyboardShortcutsDialog';
 
 interface HeaderProps {
   title?: string;
@@ -84,6 +85,9 @@ export function Header({ title = 'Dashboard' }: HeaderProps) {
               </kbd>
             </TooltipContent>
           </Tooltip>
+
+          {/* Keyboard shortcuts help */}
+          <KeyboardShortcutsDialog />
 
           {/* Command palette */}
           <Tooltip delayDuration={200}>
