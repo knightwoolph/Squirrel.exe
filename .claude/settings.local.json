@@ -10,7 +10,8 @@
       "Bash(findstr:*)",
       "mcp__Claude_Preview__preview_start",
       "Skill(ralph-loop:ralph-loop)",
-      "Skill(ralph-loop:ralph-loop:*)"
+      "Skill(ralph-loop:ralph-loop:*)",
+      "Bash(npx vitest:*)"
     ]
   }
 }

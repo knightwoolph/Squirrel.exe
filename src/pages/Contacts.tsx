@@ -154,9 +154,17 @@ function ContactForm({ open, onOpenChange, editing, onSubmit }: ContactFormProps
     resetTo(editing);
   }
 
+  const isValidEmail = (v: string) => !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+  const [emailError, setEmailError] = useState('');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
+    if (email.trim() && !isValidEmail(email.trim())) {
+      setEmailError('Please enter a valid email address');
+      return;
+    }
+    setEmailError('');
     setSaving(true);
     try {
       await onSubmit({
@@ -208,8 +216,10 @@ function ContactForm({ open, onOpenChange, editing, onSubmit }: ContactFormProps
                 type="email"
                 placeholder="jane@example.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => { setEmail(e.target.value); setEmailError(''); }}
+                error={!!emailError}
               />
+              {emailError && <p className="text-xs text-[var(--danger)]">{emailError}</p>}
             </div>
             <div className="flex flex-col gap-1.5">
               <Label htmlFor="cf-phone">Phone</Label>
