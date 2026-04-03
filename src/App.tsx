@@ -15,6 +15,7 @@ const VictoryOak = lazy(() => import('./pages/VictoryOak').then(m => ({ default:
 const Stash = lazy(() => import('./pages/Stash').then(m => ({ default: m.Stash })))
 const Settings = lazy(() => import('./pages/Settings').then(m => ({ default: m.Settings })))
 const Timer = lazy(() => import('./pages/Timer').then(m => ({ default: m.Timer })))
+const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })))
 
 function PageLoader() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/stash" element={<Stash />} />
             <Route path="/timer" element={<Timer />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </AppLayout>
